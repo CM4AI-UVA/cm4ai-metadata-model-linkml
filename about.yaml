@@ -1,0 +1,7 @@
+---
+name: cm4ai_metadata_model_linkml
+author: Sadnan Al Manir <ma3xy@virginia.edu>
+description: Cell maps for AI metadata model in LinkML
+source_schema_path: src/cm4ai_metadata_model_linkml/schema/cm4ai_metadata_model_linkml.yaml
+google_sheet_id: 1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ
+google_sheet_tabs: personinfo enums

@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "b801ab6c7e44c46db15905bf440aa573a8f1b3b2",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "cm4ai-metadata-model-linkml",
+      "__project_slug": "cm4ai_metadata_model_linkml",
+      "github_org": "cm4ai-uva",
+      "__source_path": "src/cm4ai_metadata_model_linkml/schema/cm4ai_metadata_model_linkml.yaml",
+      "project_description": "Cell maps for AI metadata model in LinkML",
+      "full_name": "Sadnan Al Manir",
+      "email": "ma3xy@virginia.edu",
+      "__author": "Sadnan Al Manir <ma3xy@virginia.edu>",
+      "license": "MIT",
+      "main_schema_class": "FairscapeBaseModel, Dataset, Software, Computation",
+      "create_python_classes": "No",
+      "use_schemasheets": "No",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}

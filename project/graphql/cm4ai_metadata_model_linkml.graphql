@@ -1,0 +1,57 @@
+type Computation
+  {
+    context: String
+    id: String!
+    name: String!
+    type: String!
+    keywords: String
+    runBy: String!
+    dateCreated: Date!
+    description: String!
+    associatedPublication: String
+    additionalDocumentation: [Uriorcurie]
+    usedSoftware: [String]!
+    calledBy: String
+    usedDataset: [String]
+    generated: [String]
+  }
+
+type Dataset
+  {
+    context: String
+    id: String!
+    name: String!
+    type: String!
+    keywords: String
+    author: String!
+    datePublished: Date!
+    version: String!
+    description: String!
+    associatedPublication: String
+    additionalDocumentation: [Uriorcurie]
+    format: String!
+    dataSchema: String
+    generatedBy: [String]
+    derivedFrom: [String]
+    usedBy: [String]
+    contentUrl: Uriorcurie!
+  }
+
+type Software
+  {
+    context: String
+    id: String!
+    name: String!
+    type: String!
+    keywords: String
+    author: String!
+    dateModified: Date!
+    version: String!
+    description: String!
+    associatedPublication: String
+    additionalDocumentation: [Uriorcurie]
+    format: String!
+    usedByComputation: [String]
+    contentUrl: Uriorcurie!
+  }
+

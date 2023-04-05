@@ -1,0 +1,102 @@
+BASE <https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX schema1: <http://schema.org/>
+PREFIX evi: <http://example.org/UNKNOWN/evi/>
+PREFIX rdfs1: <http://example.org/UNKNOWN/rdfs/>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:dateTime
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+<Computation> CLOSED {
+    (  $<Computation_tes> (  <context> @linkml:String ? ;
+          schema1:name @linkml:String ;
+          schema1:Dataset @linkml:String ;
+          schema1:keywords @linkml:String ? ;
+          <runBy> @linkml:String ;
+          schema1:dateCreated @linkml:Date ;
+          schema1:description @linkml:String ;
+          schema1:citation @linkml:String ? ;
+          rdfs1:seeAlso @linkml:Uriorcurie * ;
+          evi:usedSoftware @linkml:String + ;
+          evi:calledBy @linkml:String ? ;
+          evi:usedDataset @linkml:String * ;
+          evi:generated @linkml:String *
+       ) ;
+       rdf:type [ <Computation> ]
+    )
+}
+
+<Dataset> CLOSED {
+    (  $<Dataset_tes> (  <context> @linkml:String ? ;
+          schema1:name @linkml:String ;
+          schema1:Dataset @linkml:String ;
+          schema1:keywords @linkml:String ? ;
+          <author> @linkml:String ;
+          schema1:datePublished @linkml:Date ;
+          schema1:version @linkml:String ;
+          schema1:description @linkml:String ;
+          schema1:citation @linkml:String ? ;
+          rdfs1:seeAlso @linkml:Uriorcurie * ;
+          schema1:encodingFormat @linkml:String ;
+          <dataSchema> @linkml:String ? ;
+          evi:generatedBy @linkml:String * ;
+          evi:derivedFrom @linkml:String * ;
+          evi:usedBy @linkml:String * ;
+          schema1:contentUrl @linkml:Uriorcurie
+       ) ;
+       rdf:type [ <Dataset> ]
+    )
+}
+
+<Software> CLOSED {
+    (  $<Software_tes> (  <context> @linkml:String ? ;
+          schema1:name @linkml:String ;
+          schema1:Dataset @linkml:String ;
+          schema1:keywords @linkml:String ? ;
+          <author> @linkml:String ;
+          schema1:dateModified @linkml:Date ;
+          schema1:version @linkml:String ;
+          schema1:description @linkml:String ;
+          schema1:citation @linkml:String ? ;
+          rdfs1:seeAlso @linkml:Uriorcurie * ;
+          schema1:encodingFormat @linkml:String ;
+          evi:sotwareUsedBy @linkml:String * ;
+          schema1:contentUrl @linkml:Uriorcurie
+       ) ;
+       rdf:type [ <Software> ]
+    )
+}
+
+

@@ -1,0 +1,404 @@
+@prefix IAO: <http://purl.obolibrary.org/obo/IAO_> .
+@prefix cm4ai_metadata_model_linkml: <https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml> a owl:Ontology ;
+    rdfs:label "cm4ai-metadata-model-linkml" ;
+    IAO:0000700 cm4ai_metadata_model_linkml:Computation,
+        cm4ai_metadata_model_linkml:Dataset,
+        cm4ai_metadata_model_linkml:Software ;
+    linkml:classes "{'Dataset': ClassDefinition(name='Dataset', id_prefixes=[], definition_uri='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/Dataset', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['context', 'id', 'name', 'type', 'keywords', 'author', 'datePublished', 'version', 'description', 'associatedPublication', 'additionalDocumentation', 'format', 'dataSchema', 'generatedBy', 'derivedFrom', 'usedBy', 'contentUrl'], slot_usage={}, attributes={}, class_uri='cm4ai_metadata_model_linkml:Dataset', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={}), 'Software': ClassDefinition(name='Software', id_prefixes=[], definition_uri='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/Software', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['context', 'id', 'name', 'type', 'keywords', 'author', 'dateModified', 'version', 'description', 'associatedPublication', 'additionalDocumentation', 'format', 'usedByComputation', 'contentUrl'], slot_usage={}, attributes={}, class_uri='cm4ai_metadata_model_linkml:Software', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={}), 'Computation': ClassDefinition(name='Computation', id_prefixes=[], definition_uri='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/Computation', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description=None, alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml', imported_from=None, source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, is_a=None, abstract=None, mixin=None, mixins=[], apply_to=[], values_from=[], string_serialization=None, slots=['context', 'id', 'name', 'type', 'keywords', 'runBy', 'dateCreated', 'description', 'associatedPublication', 'additionalDocumentation', 'usedSoftware', 'calledBy', 'usedDataset', 'generated'], slot_usage={}, attributes={}, class_uri='cm4ai_metadata_model_linkml:Computation', subclass_of=None, union_of=[], defining_slots=[], tree_root=None, unique_keys={}, rules=[], classification_rules=[], slot_names_unique=None, represents_relationship=None, disjoint_with=[], children_are_mutually_disjoint=None, any_of=[], exactly_one_of=[], none_of=[], all_of=[], slot_conditions={})}" ;
+    linkml:enums "{}" ;
+    linkml:id "https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml" ;
+    linkml:imports "linkml:types" ;
+    linkml:types "{'string': TypeDefinition(name='string', id_prefixes=[], definition_uri='https://w3id.org/linkml/String', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A character string', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Text'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='xsd:string', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'integer': TypeDefinition(name='integer', id_prefixes=[], definition_uri='https://w3id.org/linkml/Integer', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='An integer', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Integer'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='int', uri='xsd:integer', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'boolean': TypeDefinition(name='boolean', id_prefixes=[], definition_uri='https://w3id.org/linkml/Boolean', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A binary (true or false) value', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Boolean'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Bool', uri='xsd:boolean', repr='bool', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'float': TypeDefinition(name='float', id_prefixes=[], definition_uri='https://w3id.org/linkml/Float', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number that conforms to the xsd:float specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Float'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='float', uri='xsd:float', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'double': TypeDefinition(name='double', id_prefixes=[], definition_uri='https://w3id.org/linkml/Double', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number that conforms to the xsd:double specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=['schema:Float'], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='float', uri='xsd:double', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'decimal': TypeDefinition(name='decimal', id_prefixes=[], definition_uri='https://w3id.org/linkml/Decimal', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A real number with arbitrary precision that conforms to the xsd:decimal specification', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=['schema:Number'], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Decimal', uri='xsd:decimal', repr=None, union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'time': TypeDefinition(name='time', id_prefixes=[], definition_uri='https://w3id.org/linkml/Time', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A time object represents a (local) time of day, independent of any particular day', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=['URI is dateTime because OWL reasoners do not work with straight date or time'], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Time'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDTime', uri='xsd:dateTime', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'date': TypeDefinition(name='date', id_prefixes=[], definition_uri='https://w3id.org/linkml/Date', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='a date (year, month and day) in an idealized calendar', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[\"URI is dateTime because OWL reasoners don't work with straight date or time\"], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:Date'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDDate', uri='xsd:date', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'datetime': TypeDefinition(name='datetime', id_prefixes=[], definition_uri='https://w3id.org/linkml/Datetime', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='The combination of a date and time', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=['schema:DateTime'], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='XSDDateTime', uri='xsd:dateTime', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'date_or_datetime': TypeDefinition(name='date_or_datetime', id_prefixes=[], definition_uri='https://w3id.org/linkml/DateOrDatetime', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Either a date or a datetime', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='str', uri='linkml:DateOrDatetime', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'uriorcurie': TypeDefinition(name='uriorcurie', id_prefixes=[], definition_uri='https://w3id.org/linkml/Uriorcurie', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='a URI or a CURIE', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='URIorCURIE', uri='xsd:anyURI', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'curie': TypeDefinition(name='curie', id_prefixes=[], definition_uri='https://w3id.org/linkml/Curie', local_names={}, conforms_to='https://www.w3.org/TR/curie/', implements=[], extensions={}, annotations={}, description='a compact URI', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=['in RDF serializations this MUST be expanded to a URI', 'in non-RDF serializations MAY be serialized as the compact representation'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='Curie', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'uri': TypeDefinition(name='uri', id_prefixes=[], definition_uri='https://w3id.org/linkml/Uri', local_names={}, conforms_to='https://www.ietf.org/rfc/rfc3987.txt', implements=[], extensions={}, annotations={}, description='a complete URI', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=['in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=['schema:URL'], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='URI', uri='xsd:anyURI', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'ncname': TypeDefinition(name='ncname', id_prefixes=[], definition_uri='https://w3id.org/linkml/Ncname', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='Prefix part of CURIE', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='NCName', uri='xsd:string', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'objectidentifier': TypeDefinition(name='objectidentifier', id_prefixes=[], definition_uri='https://w3id.org/linkml/Objectidentifier', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A URI or CURIE that represents an object in the model.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=['Used for inheritence and type checking'], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='ElementIdentifier', uri='shex:iri', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[]), 'nodeidentifier': TypeDefinition(name='nodeidentifier', id_prefixes=[], definition_uri='https://w3id.org/linkml/Nodeidentifier', local_names={}, conforms_to=None, implements=[], extensions={}, annotations={}, description='A URI, CURIE or BNODE that represents a node in a model.', alt_descriptions={}, title=None, deprecated=None, todos=[], notes=[], comments=[], examples=[], in_subset=[], from_schema='https://w3id.org/linkml/types', imported_from='linkml:types', source=None, in_language=None, see_also=[], deprecated_element_has_exact_replacement=None, deprecated_element_has_possible_replacement=None, aliases=[], structured_aliases={}, mappings=[], exact_mappings=[], close_mappings=[], related_mappings=[], narrow_mappings=[], broad_mappings=[], created_by=None, created_on=None, last_updated_on=None, modified_by=None, status=None, rank=None, typeof=None, base='NodeIdentifier', uri='shex:nonLiteral', repr='str', union_of=[], pattern=None, structured_pattern=None, unit=None, implicit_prefix=None, equals_string=None, equals_string_in=[], equals_number=None, minimum_value=None, maximum_value=None, none_of=[], exactly_one_of=[], any_of=[], all_of=[])}" .
+
+linkml:SubsetDefinition a owl:Class ;
+    rdfs:label "subset_definition" ;
+    linkml:attributes "{}" ;
+    linkml:is_a "element" .
+
+linkml:TypeDefinition a owl:Class ;
+    rdfs:label "type_definition" ;
+    linkml:attributes "{}" ;
+    linkml:is_a "element" ;
+    linkml:mixins "type_expression" .
+
+linkml:topValue a owl:DatatypeProperty ;
+    rdfs:label "value" .
+
+cm4ai_metadata_model_linkml:Computation a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Computation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:Dataset ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:context ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/calledBy> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/generated> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/usedDataset> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:citation ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Date ;
+            owl:onProperty schema1:dateCreated ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom linkml:String ;
+                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ] [ a owl:Restriction ;
+                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ;
+                        owl:someValuesFrom linkml:String ] ) ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:keywords ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:runBy ;
+            owl:qualifiedCardinality 1 ] ;
+    linkml:attributes "{}" .
+
+cm4ai_metadata_model_linkml:Dataset a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Dataset" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:citation ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:keywords ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:context ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/generatedBy> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:author ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/usedBy> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Date ;
+            owl:onProperty schema1:datePublished ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty schema1:contentUrl ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/derivedFrom> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:dataSchema ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:encodingFormat ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:Dataset ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:version ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ;
+            owl:qualifiedCardinality 1 ] ;
+    linkml:attributes "{}" .
+
+cm4ai_metadata_model_linkml:Software a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Software" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:version ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:encodingFormat ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:context ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty schema1:contentUrl ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:author ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:keywords ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:citation ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:Dataset ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/sotwareUsedBy> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Date ;
+            owl:onProperty schema1:dateModified ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ] ;
+    linkml:attributes "{}" .
+
+cm4ai_metadata_model_linkml:dataSchema a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dataSchema" ;
+    rdfs:range linkml:String ;
+    skos:definition "schema of the dataset" .
+
+cm4ai_metadata_model_linkml:runBy a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "runBy" ;
+    rdfs:range linkml:String ;
+    skos:definition "author(s) of the computation" .
+
+<http://example.org/UNKNOWN/evi/calledBy> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "calledBy" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) used to generate the computation" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/calledBy> .
+
+<http://example.org/UNKNOWN/evi/derivedFrom> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "derivedFrom" ;
+    rdfs:range linkml:String ;
+    skos:definition "source(s) of the dataset" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/derivedFrom> .
+
+<http://example.org/UNKNOWN/evi/generated> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "generated" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) using the computation" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/generated> .
+
+<http://example.org/UNKNOWN/evi/generatedBy> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "generatedBy" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) used to generate the dataset" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/generatedBy> .
+
+<http://example.org/UNKNOWN/evi/sotwareUsedBy> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usedByComputation" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) using the software" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/sotwareUsedBy> .
+
+<http://example.org/UNKNOWN/evi/usedBy> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usedBy" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) using the dataset" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/usedBy> .
+
+<http://example.org/UNKNOWN/evi/usedDataset> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usedDataset" ;
+    rdfs:range linkml:String ;
+    skos:definition "source(s) of the computation" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/usedDataset> .
+
+schema1:dateCreated a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dateCreated" ;
+    rdfs:range linkml:Date ;
+    skos:definition "publication date of the computation" ;
+    skos:exactMatch schema1:dateCreated .
+
+schema1:dateModified a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "dateModified" ;
+    rdfs:range linkml:Date ;
+    skos:definition "modification date of the software" ;
+    skos:exactMatch schema1:dateModified .
+
+schema1:datePublished a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "datePublished" ;
+    rdfs:range linkml:Date ;
+    skos:definition "publication date of the dataset" ;
+    skos:exactMatch schema1:datePublished .
+
+cm4ai_metadata_model_linkml:author a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author" ;
+    rdfs:range linkml:String ;
+    skos:definition "author(s) of the dataset" .
+
+<http://example.org/UNKNOWN/evi/usedSoftware> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "usedSoftware" ;
+    rdfs:range linkml:String ;
+    skos:definition "computation(s) used to generate the computation" ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/usedSoftware> .
+
+schema1:contentUrl a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "contentUrl" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "Actual bytes of the media object, for example the image file or video file" ;
+    skos:exactMatch schema1:contentUrl .
+
+schema1:encodingFormat a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "format" ;
+    rdfs:range linkml:String ;
+    skos:definition "format(s) of the dataset" ;
+    skos:exactMatch schema1:encodingFormat .
+
+schema1:version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "version" ;
+    rdfs:range linkml:String ;
+    skos:definition "version of the dataset" ;
+    skos:exactMatch schema1:version .
+
+cm4ai_metadata_model_linkml:context a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "context" ;
+    rdfs:range linkml:String .
+
+linkml:ClassDefinition a owl:Class ;
+    rdfs:label "class_definition" ;
+    linkml:attributes "{}" ;
+    linkml:is_a "definition" ;
+    linkml:mixins "class_expression" .
+
+<http://example.org/UNKNOWN/evi/identifier> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "id" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch <http://example.org/UNKNOWN/evi/identifier> .
+
+<http://example.org/UNKNOWN/rdfs/seeAlso> a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "additionalDocumentation" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:definition "a reference" ;
+    skos:exactMatch <http://example.org/UNKNOWN/rdfs/seeAlso> .
+
+schema1:Dataset a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "type" ;
+    rdfs:range linkml:String ;
+    skos:definition "explicit type" ;
+    skos:exactMatch schema1:Dataset .
+
+schema1:citation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "associatedPublication" ;
+    rdfs:range linkml:String ;
+    skos:definition "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
+    skos:exactMatch schema1:citation .
+
+schema1:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "description" ;
+    rdfs:range linkml:String ;
+    skos:definition "description of the dataset" ;
+    skos:exactMatch schema1:description .
+
+schema1:keywords a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "keywords" ;
+    rdfs:range linkml:String ;
+    skos:exactMatch schema1:keywords .
+
+schema1:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    rdfs:range linkml:String ;
+    skos:definition "name of the dataset" ;
+    skos:exactMatch schema1:name .
+
+linkml:SlotDefinition a owl:Class ;
+    rdfs:label "slot_definition" ;
+    linkml:attributes "{}" ;
+    linkml:is_a "definition" ;
+    linkml:mixins "slot_expression" .
+
+

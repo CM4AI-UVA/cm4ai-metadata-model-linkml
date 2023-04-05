@@ -1,0 +1,9 @@
+{
+   "PATO": "http://purl.obolibrary.org/obo/PATO_",
+   "cm4ai_metadata_model_linkml": "https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml/",
+   "evi": "http://example.org/UNKNOWN/evi/",
+   "example": "https://example.org/",
+   "linkml": "https://w3id.org/linkml/",
+   "rdfs": "http://example.org/UNKNOWN/rdfs/",
+   "schema": "http://schema.org/"
+}

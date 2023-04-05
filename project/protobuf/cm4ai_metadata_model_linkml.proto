@@ -1,0 +1,54 @@
+message Computation
+ {
+  string context = 0
+  string id = 0
+  string name = 0
+  string type = 0
+  string keywords = 0
+  string runBy = 0
+  date dateCreated = 0
+  string description = 0
+  string associatedPublication = 0
+ repeated  uriorcurie additionalDocumentation = 0
+ repeated  string usedSoftware = 0
+  string calledBy = 0
+ repeated  string usedDataset = 0
+ repeated  string generated = 0
+ }
+message Dataset
+ {
+  string context = 0
+  string id = 0
+  string name = 0
+  string type = 0
+  string keywords = 0
+  string author = 0
+  date datePublished = 0
+  string version = 0
+  string description = 0
+  string associatedPublication = 0
+ repeated  uriorcurie additionalDocumentation = 0
+  string format = 0
+  string dataSchema = 0
+ repeated  string generatedBy = 0
+ repeated  string derivedFrom = 0
+ repeated  string usedBy = 0
+  uriorcurie contentUrl = 0
+ }
+message Software
+ {
+  string context = 0
+  string id = 0
+  string name = 0
+  string type = 0
+  string keywords = 0
+  string author = 0
+  date dateModified = 0
+  string version = 0
+  string description = 0
+  string associatedPublication = 0
+ repeated  uriorcurie additionalDocumentation = 0
+  string format = 0
+ repeated  string usedByComputation = 0
+  uriorcurie contentUrl = 0
+ }

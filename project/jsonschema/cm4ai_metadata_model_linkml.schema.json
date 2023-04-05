@@ -1,0 +1,270 @@
+{
+    "$defs": {
+        "Computation": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "additionalDocumentation": {
+                    "description": "a reference",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "associatedPublication": {
+                    "description": "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc.",
+                    "type": "string"
+                },
+                "calledBy": {
+                    "description": "computation(s) used to generate the computation",
+                    "type": "string"
+                },
+                "context": {
+                    "type": "string"
+                },
+                "dateCreated": {
+                    "description": "publication date of the computation",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "description of the dataset",
+                    "type": "string"
+                },
+                "generated": {
+                    "description": "computation(s) using the computation",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name of the dataset",
+                    "type": "string"
+                },
+                "runBy": {
+                    "description": "author(s) of the computation",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "explicit type",
+                    "type": "string"
+                },
+                "usedDataset": {
+                    "description": "source(s) of the computation",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "usedSoftware": {
+                    "description": "computation(s) used to generate the computation",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "type",
+                "runBy",
+                "dateCreated",
+                "description",
+                "usedSoftware"
+            ],
+            "title": "Computation",
+            "type": "object"
+        },
+        "Dataset": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "additionalDocumentation": {
+                    "description": "a reference",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "associatedPublication": {
+                    "description": "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc.",
+                    "type": "string"
+                },
+                "author": {
+                    "description": "author(s) of the dataset",
+                    "type": "string"
+                },
+                "contentUrl": {
+                    "description": "Actual bytes of the media object, for example the image file or video file",
+                    "type": "string"
+                },
+                "context": {
+                    "type": "string"
+                },
+                "dataSchema": {
+                    "description": "schema of the dataset",
+                    "type": "string"
+                },
+                "datePublished": {
+                    "description": "publication date of the dataset",
+                    "format": "date",
+                    "type": "string"
+                },
+                "derivedFrom": {
+                    "description": "source(s) of the dataset",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "description": {
+                    "description": "description of the dataset",
+                    "type": "string"
+                },
+                "format": {
+                    "description": "format(s) of the dataset",
+                    "type": "string"
+                },
+                "generatedBy": {
+                    "description": "computation(s) used to generate the dataset",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name of the dataset",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "explicit type",
+                    "type": "string"
+                },
+                "usedBy": {
+                    "description": "computation(s) using the dataset",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "version": {
+                    "description": "version of the dataset",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "type",
+                "author",
+                "datePublished",
+                "version",
+                "description",
+                "format",
+                "contentUrl"
+            ],
+            "title": "Dataset",
+            "type": "object"
+        },
+        "Software": {
+            "additionalProperties": false,
+            "description": "",
+            "properties": {
+                "additionalDocumentation": {
+                    "description": "a reference",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "associatedPublication": {
+                    "description": "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc.",
+                    "type": "string"
+                },
+                "author": {
+                    "description": "author(s) of the dataset",
+                    "type": "string"
+                },
+                "contentUrl": {
+                    "description": "Actual bytes of the media object, for example the image file or video file",
+                    "type": "string"
+                },
+                "context": {
+                    "type": "string"
+                },
+                "dateModified": {
+                    "description": "modification date of the software",
+                    "format": "date",
+                    "type": "string"
+                },
+                "description": {
+                    "description": "description of the dataset",
+                    "type": "string"
+                },
+                "format": {
+                    "description": "format(s) of the dataset",
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "keywords": {
+                    "type": "string"
+                },
+                "name": {
+                    "description": "name of the dataset",
+                    "type": "string"
+                },
+                "type": {
+                    "description": "explicit type",
+                    "type": "string"
+                },
+                "usedByComputation": {
+                    "description": "computation(s) using the software",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "version": {
+                    "description": "version of the dataset",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "type",
+                "author",
+                "dateModified",
+                "version",
+                "description",
+                "format",
+                "contentUrl"
+            ],
+            "title": "Software",
+            "type": "object"
+        }
+    },
+    "$id": "https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": true,
+    "metamodel_version": "1.7.0",
+    "title": "cm4ai-metadata-model-linkml",
+    "type": "object",
+    "version": null
+}

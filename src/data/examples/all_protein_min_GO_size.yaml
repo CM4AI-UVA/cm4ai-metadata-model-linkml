@@ -1,0 +1,22 @@
+id: ARK:all_protein_min_GO_size.1/db8c713a-b656-48f3-b6f1-8728204c982c.txt
+name: precomputed protein min GO size matrix
+type: schema:Dataset
+author: Qin et al.
+date_published: 2021-04-25
+version: 1.0
+description: >- # multi-line content
+  Matrix showing # of distinct proteins in the GO cellular compartment with
+  smallest # distinct proteins for each protein pair.
+associated_publication: >-
+  Qin, Y. et al. A multi-scale map of cell structure fusing protein images
+  and interactions. Nature 600, 536–542 2021
+additional_documentation:
+  - https://idekerlab.ucsd.edu/music/
+format: TSV
+schema: >-
+  18395 X 18395 matrix of minimum protein-protein GO cellular compartment sizes
+derivedFrom:
+  - GO download Sept 25 2018 → GO_cc_human_no_HPA.txt
+usedBy:
+  - community detection community_detection.py
+contentUrl: https://www.dropbox.com/s/w9lxpnw39g64zs8/all_protein_min_GO_size.txt?dl=0

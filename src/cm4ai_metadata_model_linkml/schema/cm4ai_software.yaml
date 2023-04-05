@@ -1,0 +1,169 @@
+id: http://example.org/ark:59853/B2AI/CM4AI/linkmlmusicsoftwaremodel
+title: LinkML model (aka schema, aka data model) for describing the structure of MuSIC 1.0 softwares
+name: linkmlmusicsoftwaremodel
+description: |-
+  The model is defined using the Linked Data Modeling Language framework.
+
+  For more information on LinkML:
+
+  * [linkml.io](https://linkml.io) main website
+  * [specification](https://linkml.io/linkml-model/docs/specification/)
+
+  The Multi-Scale Integrated Cell (MuSIC) pipeline integrates protein
+  fluorescent images and protein biophysical association data to create a
+  unified hierarchical map of human cell architecture.
+
+  More information about MuSIC pipeline:
+
+  * [Publication](https://www.biorxiv.org/cgi/content/short/2020.06.21.163709v1)
+  * [Github](https://github.com/idekerlab/MuSIC)
+  * [Step-by-step guide] (https://github.com/idekerlab/MuSIC/wiki/A-Step-By-Step-Guide-to-Building-a-MuSIC-Map)
+
+  The LinkML model consists of elements that instantiate classes.
+
+license: https://creativecommons.org/publicdomain/zero/1.0/
+version: 0.1
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  schema: http://schema.org/
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  prov: http://www.w3.org/ns/prov#
+  dcterms: http://purl.org/dc/terms/
+  evi: https://w3id.org/EVI#
+  orcid: https://orcid.org/
+  ARK: https://example.org/ark:59853/B2AI/CM4AI/
+
+#default_prefix: linkml
+# default range of the slots unless otherwise specified
+default_range: string
+
+#default_curi_maps:
+#    - semweb_context
+
+emit_prefixes:
+  - linkml
+  - rdfs
+  - xsd
+  - dcterms
+
+imports:
+  - linkml:types
+  #- linkml:mappings
+  #- linkml:extensions
+  #- linkml:annotations
+  #- linkml:validation
+  #- linkml:units
+
+#==================================
+# Slots                           #
+#==================================
+slots:
+
+  # -----------------------------------
+  # Common metadata shared by all elements
+  # -----------------------------------
+  
+  context:
+
+  id:
+    identifier: true
+    slot_uri: evi:identifier
+    examples:
+      - value: https://example.org/ark:59853/B2AI/CM4AI/MuSIC_proteins.1/2df55013-7512-475f-adf3-819e864d1bfd.txt
+        description: >-
+          Primary identifiers in CM4AI are ARK-form persistent IDs. Valid ARKs
+          are defined by (Kunze and Bermès 2022) and are structured as shown:
+            NMA: resolving host name, e.g. https://example.org
+            label: e.g. ark:
+            NAAN: name assigning authority number,  e.g. "99999", followed by "/"
+            shoulder: the organization and project labels, = "B2AI/CM4AI/"
+            pre-qualifier: the schema name, e.g. "music_proteins"
+            qualifier: a valid UUID
+
+
+  name:
+    required: true
+    description:
+      name of the software
+    slot_uri: schema:name
+  type:
+    required: true
+    description:
+      explicit type
+    slot_uri: schema:Software
+  keywords:
+    slot_uri: schema:keywords
+  author:
+    required: true
+    description:
+      author(s) of the software
+  dateModified:
+    required: true
+    description:
+      modification date of the software
+    slot_uri: schema:dateModified
+    range: date  ## Details https://linkml.io/linkml-model/docs/Date/
+  version:
+    required: true
+    description:
+      version of the software
+    slot_uri: schema:version
+  description:
+    required: true
+    description:
+      description of the software
+    slot_uri: schema:description
+  associatedPublication:
+    description: >-
+      A citation or reference to a creative work, such as another
+      publication, web page, scholarly article, etc.
+    slot_uri: schema:citation
+  additionalDocumentation:
+    multivalued: true
+    range: uriorcurie
+    description: a reference
+    slot_uri: rdfs:seeAlso
+  format:
+    required: true
+    description:
+      format(s) of the software
+    slot_uri: schema:encodingFormat
+  usedByComputation:
+    description:
+      computation(s) using the software
+    slot_uri: evi:sotwareUsedBy
+    multivalued: true
+  contentUrl:
+    required: true
+    description:
+      Actual bytes of the media object, for example the image file or video file
+    slot_uri: schema:contentUrl
+    range: uriorcurie
+
+#==================================
+# Classes                         #
+#==================================
+
+classes:
+  # -----------------------------------
+  # Class definition
+  # -----------------------------------
+
+  Software:  
+
+    slots:
+      - context
+      - id
+      - name
+      - type
+      - keywords
+      - author
+      - dateModified
+      - version
+      - description
+      - associatedPublication
+      - additionalDocumentation
+      - format
+      - usedByComputation
+      - contentUrl
