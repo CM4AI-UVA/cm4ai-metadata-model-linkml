@@ -94,6 +94,8 @@ slots:
     slot_uri: schema:Software
   keywords:
     slot_uri: schema:keywords
+    description:
+      Keywords or tags used to describe the entity
   author:
     required: true
     description:

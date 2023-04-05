@@ -1,5 +1,5 @@
 # Auto generated from cm4ai_metadata_model_linkml.yaml by pythongen.py version: 0.9.0
-# Generation date: 2023-04-05T12:13:39
+# Generation date: 2023-04-05T12:42:09
 # Schema: cm4ai-metadata-model-linkml
 #
 # id: https://w3id.org/cm4ai-uva/cm4ai-metadata-model-linkml

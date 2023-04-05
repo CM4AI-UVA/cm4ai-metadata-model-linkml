@@ -7,14 +7,51 @@
 cm4ai_metadata_model_linkml:Computation a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "description of the dataset" ;
+    sh:property [ sh:description "computation(s) used to generate the computation" ;
+            sh:minCount 1 ;
+            sh:order 10 ;
+            sh:path <evi:usedSoftware> ],
+        [ sh:description "name of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:name ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path cm4ai_metadata_model_linkml:context ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <evi:identifier> ],
+        [ sh:description "explicit type" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 3 ;
+            sh:path schema1:Dataset ],
+        [ sh:description "a reference" ;
+            sh:order 9 ;
+            sh:path <rdfs:seeAlso> ],
+        [ sh:description "publication date of the computation" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:dateCreated ],
+        [ sh:description "author(s) of the computation" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 5 ;
+            sh:path cm4ai_metadata_model_linkml:runBy ],
+        [ sh:description "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
+            sh:maxCount 1 ;
+            sh:order 8 ;
+            sh:path schema1:citation ],
+        [ sh:description "description of the dataset" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 7 ;
             sh:path schema1:description ],
-        [ sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path cm4ai_metadata_model_linkml:context ],
+        [ sh:description "source(s) of the computation" ;
+            sh:order 12 ;
+            sh:path <evi:usedDataset> ],
         [ sh:maxCount 1 ;
             sh:order 4 ;
             sh:path schema1:keywords ],
@@ -22,183 +59,146 @@ cm4ai_metadata_model_linkml:Computation a sh:NodeShape ;
             sh:order 13 ;
             sh:path <evi:generated> ],
         [ sh:description "computation(s) used to generate the computation" ;
-            sh:minCount 1 ;
-            sh:order 10 ;
-            sh:path <evi:usedSoftware> ],
-        [ sh:description "source(s) of the computation" ;
-            sh:order 12 ;
-            sh:path <evi:usedDataset> ],
-        [ sh:description "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
-            sh:maxCount 1 ;
-            sh:order 8 ;
-            sh:path schema1:citation ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path <evi:identifier> ],
-        [ sh:description "a reference" ;
-            sh:order 9 ;
-            sh:path <rdfs:seeAlso> ],
-        [ sh:description "author(s) of the computation" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 5 ;
-            sh:path cm4ai_metadata_model_linkml:runBy ],
-        [ sh:description "publication date of the computation" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 6 ;
-            sh:path schema1:dateCreated ],
-        [ sh:description "computation(s) used to generate the computation" ;
             sh:maxCount 1 ;
             sh:order 11 ;
-            sh:path <evi:calledBy> ],
-        [ sh:description "name of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path schema1:name ],
-        [ sh:description "explicit type" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 3 ;
-            sh:path schema1:Dataset ] ;
+            sh:path <evi:calledBy> ] ;
     sh:targetClass cm4ai_metadata_model_linkml:Computation .
 
 cm4ai_metadata_model_linkml:Dataset a sh:NodeShape ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "version of the dataset" ;
+    sh:property [ sh:description "a reference" ;
+            sh:order 10 ;
+            sh:path <rdfs:seeAlso> ],
+        [ sh:description "author(s) of the dataset" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 7 ;
-            sh:path schema1:version ],
-        [ sh:description "computation(s) used to generate the dataset" ;
-            sh:order 13 ;
-            sh:path <evi:generatedBy> ],
-        [ sh:description "computation(s) using the dataset" ;
-            sh:order 15 ;
-            sh:path <evi:usedBy> ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path <evi:identifier> ],
-        [ sh:description "schema of the dataset" ;
-            sh:maxCount 1 ;
-            sh:order 12 ;
-            sh:path cm4ai_metadata_model_linkml:dataSchema ],
-        [ sh:description "source(s) of the dataset" ;
-            sh:order 14 ;
-            sh:path <evi:derivedFrom> ],
-        [ sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path cm4ai_metadata_model_linkml:context ],
-        [ sh:description "publication date of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 6 ;
-            sh:path schema1:datePublished ],
+            sh:order 5 ;
+            sh:path cm4ai_metadata_model_linkml:author ],
         [ sh:description "format(s) of the dataset" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 11 ;
             sh:path schema1:encodingFormat ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:keywords ],
         [ sh:description "Actual bytes of the media object, for example the image file or video file" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 16 ;
             sh:path schema1:contentUrl ],
+        [ sh:description "computation(s) used to generate the dataset" ;
+            sh:order 13 ;
+            sh:path <evi:generatedBy> ],
+        [ sh:description "schema of the dataset" ;
+            sh:maxCount 1 ;
+            sh:order 12 ;
+            sh:path cm4ai_metadata_model_linkml:dataSchema ],
+        [ sh:description "publication date of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:datePublished ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <evi:identifier> ],
+        [ sh:description "description of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 8 ;
+            sh:path schema1:description ],
         [ sh:description "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
             sh:maxCount 1 ;
             sh:order 9 ;
             sh:path schema1:citation ],
-        [ sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema1:keywords ],
-        [ sh:description "explicit type" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 3 ;
-            sh:path schema1:Dataset ],
-        [ sh:description "name of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path schema1:name ],
-        [ sh:description "author(s) of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 5 ;
-            sh:path cm4ai_metadata_model_linkml:author ],
-        [ sh:description "description of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 8 ;
-            sh:path schema1:description ],
-        [ sh:description "a reference" ;
-            sh:order 10 ;
-            sh:path <rdfs:seeAlso> ] ;
-    sh:targetClass cm4ai_metadata_model_linkml:Dataset .
-
-cm4ai_metadata_model_linkml:Software a sh:NodeShape ;
-    sh:closed true ;
-    sh:ignoredProperties ( rdf:type ) ;
-    sh:property [ sh:description "format(s) of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 11 ;
-            sh:path schema1:encodingFormat ],
-        [ sh:maxCount 1 ;
-            sh:order 0 ;
-            sh:path cm4ai_metadata_model_linkml:context ],
-        [ sh:description "description of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 8 ;
-            sh:path schema1:description ],
-        [ sh:description "Actual bytes of the media object, for example the image file or video file" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 13 ;
-            sh:path schema1:contentUrl ],
-        [ sh:maxCount 1 ;
-            sh:order 1 ;
-            sh:path <evi:identifier> ],
-        [ sh:description "name of the dataset" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 2 ;
-            sh:path schema1:name ],
-        [ sh:description "a reference" ;
-            sh:order 10 ;
-            sh:path <rdfs:seeAlso> ],
-        [ sh:description "modification date of the software" ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:order 6 ;
-            sh:path schema1:dateModified ],
+        [ sh:description "source(s) of the dataset" ;
+            sh:order 14 ;
+            sh:path <evi:derivedFrom> ],
         [ sh:description "version of the dataset" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 7 ;
             sh:path schema1:version ],
-        [ sh:maxCount 1 ;
-            sh:order 4 ;
-            sh:path schema1:keywords ],
-        [ sh:description "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
-            sh:maxCount 1 ;
-            sh:order 9 ;
-            sh:path schema1:citation ],
-        [ sh:description "computation(s) using the software" ;
-            sh:order 12 ;
-            sh:path <evi:sotwareUsedBy> ],
-        [ sh:description "author(s) of the dataset" ;
+        [ sh:description "computation(s) using the dataset" ;
+            sh:order 15 ;
+            sh:path <evi:usedBy> ],
+        [ sh:description "name of the dataset" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:order 5 ;
-            sh:path cm4ai_metadata_model_linkml:author ],
+            sh:order 2 ;
+            sh:path schema1:name ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path cm4ai_metadata_model_linkml:context ],
         [ sh:description "explicit type" ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:order 3 ;
             sh:path schema1:Dataset ] ;
+    sh:targetClass cm4ai_metadata_model_linkml:Dataset .
+
+cm4ai_metadata_model_linkml:Software a sh:NodeShape ;
+    sh:closed true ;
+    sh:ignoredProperties ( rdf:type ) ;
+    sh:property [ sh:description "name of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 2 ;
+            sh:path schema1:name ],
+        [ sh:maxCount 1 ;
+            sh:order 1 ;
+            sh:path <evi:identifier> ],
+        [ sh:description "computation(s) using the software" ;
+            sh:order 12 ;
+            sh:path <evi:sotwareUsedBy> ],
+        [ sh:description "explicit type" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 3 ;
+            sh:path schema1:Dataset ],
+        [ sh:description "modification date of the software" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 6 ;
+            sh:path schema1:dateModified ],
+        [ sh:description "author(s) of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 5 ;
+            sh:path cm4ai_metadata_model_linkml:author ],
+        [ sh:maxCount 1 ;
+            sh:order 0 ;
+            sh:path cm4ai_metadata_model_linkml:context ],
+        [ sh:description "A citation or reference to a creative work, such as another publication, web page, scholarly article, etc." ;
+            sh:maxCount 1 ;
+            sh:order 9 ;
+            sh:path schema1:citation ],
+        [ sh:maxCount 1 ;
+            sh:order 4 ;
+            sh:path schema1:keywords ],
+        [ sh:description "version of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 7 ;
+            sh:path schema1:version ],
+        [ sh:description "Actual bytes of the media object, for example the image file or video file" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 13 ;
+            sh:path schema1:contentUrl ],
+        [ sh:description "description of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 8 ;
+            sh:path schema1:description ],
+        [ sh:description "format(s) of the dataset" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:order 11 ;
+            sh:path schema1:encodingFormat ],
+        [ sh:description "a reference" ;
+            sh:order 10 ;
+            sh:path <rdfs:seeAlso> ] ;
     sh:targetClass cm4ai_metadata_model_linkml:Software .
 

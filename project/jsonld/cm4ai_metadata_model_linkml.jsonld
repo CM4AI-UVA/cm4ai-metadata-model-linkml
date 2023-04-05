@@ -772,7 +772,7 @@
   "source_file": "cm4ai_metadata_model_linkml.yaml",
   "source_file_date": "2023-04-05T12:13:13",
   "source_file_size": 5647,
-  "generation_date": "2023-04-05T12:13:32",
+  "generation_date": "2023-04-05T12:42:03",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/cm4ai_metadata_model_linkml.context.jsonld",

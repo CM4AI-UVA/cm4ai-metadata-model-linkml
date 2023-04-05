@@ -37,26 +37,37 @@ cm4ai_metadata_model_linkml:Computation a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Computation" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema1:Dataset ;
-            owl:qualifiedCardinality 1 ],
+            owl:onProperty schema1:keywords ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty cm4ai_metadata_model_linkml:context ],
         [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:runBy ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/calledBy> ],
+            owl:onProperty schema1:citation ],
+        [ a owl:Class ;
+            owl:intersectionOf ( [ a owl:Restriction ;
+                        owl:allValuesFrom linkml:String ;
+                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ] [ a owl:Restriction ;
+                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ;
+                        owl:someValuesFrom linkml:String ] ) ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
             owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/generated> ],
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/calledBy> ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
-            owl:onProperty schema1:name ;
+            owl:onProperty schema1:Dataset ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
@@ -66,30 +77,19 @@ cm4ai_metadata_model_linkml:Computation a owl:Class,
             owl:allValuesFrom linkml:String ;
             owl:onProperty <http://example.org/UNKNOWN/evi/usedDataset> ],
         [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema1:citation ],
+            owl:onProperty schema1:name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/generated> ],
         [ a owl:Restriction ;
             owl:onClass linkml:Date ;
             owl:onProperty schema1:dateCreated ;
             owl:qualifiedCardinality 1 ],
-        [ a owl:Class ;
-            owl:intersectionOf ( [ a owl:Restriction ;
-                        owl:allValuesFrom linkml:String ;
-                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ] [ a owl:Restriction ;
-                        owl:onProperty <http://example.org/UNKNOWN/evi/usedSoftware> ;
-                        owl:someValuesFrom linkml:String ] ) ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:keywords ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty cm4ai_metadata_model_linkml:runBy ;
             owl:qualifiedCardinality 1 ] ;
     linkml:attributes "{}" .
 
@@ -97,24 +97,25 @@ cm4ai_metadata_model_linkml:Dataset a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Dataset" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty schema1:citation ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:keywords ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty cm4ai_metadata_model_linkml:context ],
+            owl:onProperty schema1:version ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/generatedBy> ],
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:Dataset ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:citation ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Date ;
+            owl:onProperty schema1:datePublished ;
+            owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty schema1:description ;
@@ -124,11 +125,57 @@ cm4ai_metadata_model_linkml:Dataset a owl:Class,
             owl:onProperty cm4ai_metadata_model_linkml:author ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:Uriorcurie ;
+            owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:encodingFormat ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:context ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/generatedBy> ],
+        [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:keywords ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/derivedFrom> ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:Uriorcurie ;
+            owl:onProperty schema1:contentUrl ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
             owl:allValuesFrom linkml:String ;
             owl:onProperty <http://example.org/UNKNOWN/evi/usedBy> ],
         [ a owl:Restriction ;
-            owl:onClass linkml:Date ;
-            owl:onProperty schema1:datePublished ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty cm4ai_metadata_model_linkml:dataSchema ] ;
+    linkml:attributes "{}" .
+
+cm4ai_metadata_model_linkml:Software a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Software" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxQualifiedCardinality 1 ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:keywords ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:version ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:allValuesFrom linkml:Uriorcurie ;
@@ -138,52 +185,31 @@ cm4ai_metadata_model_linkml:Dataset a owl:Class,
             owl:onProperty schema1:contentUrl ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/derivedFrom> ],
-        [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
-            owl:onProperty cm4ai_metadata_model_linkml:dataSchema ],
+            owl:onProperty schema1:citation ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:encodingFormat ;
-            owl:qualifiedCardinality 1 ],
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty <http://example.org/UNKNOWN/evi/sotwareUsedBy> ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
             owl:onProperty schema1:Dataset ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:version ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:name ;
-            owl:qualifiedCardinality 1 ] ;
-    linkml:attributes "{}" .
-
-cm4ai_metadata_model_linkml:Software a owl:Class,
-        linkml:ClassDefinition ;
-    rdfs:label "Software" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:version ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:encodingFormat ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:name ;
+            owl:onClass linkml:Date ;
+            owl:onProperty schema1:dateModified ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:maxQualifiedCardinality 1 ;
             owl:onClass linkml:String ;
             owl:onProperty cm4ai_metadata_model_linkml:context ],
         [ a owl:Restriction ;
-            owl:onClass linkml:Uriorcurie ;
-            owl:onProperty schema1:contentUrl ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:description ;
+            owl:qualifiedCardinality 1 ],
+        [ a owl:Restriction ;
+            owl:onClass linkml:String ;
+            owl:onProperty schema1:name ;
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
@@ -191,34 +217,8 @@ cm4ai_metadata_model_linkml:Software a owl:Class,
             owl:qualifiedCardinality 1 ],
         [ a owl:Restriction ;
             owl:onClass linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/identifier> ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:description ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:keywords ],
-        [ a owl:Restriction ;
-            owl:maxQualifiedCardinality 1 ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:citation ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:String ;
-            owl:onProperty schema1:Dataset ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:String ;
-            owl:onProperty <http://example.org/UNKNOWN/evi/sotwareUsedBy> ],
-        [ a owl:Restriction ;
-            owl:onClass linkml:Date ;
-            owl:onProperty schema1:dateModified ;
-            owl:qualifiedCardinality 1 ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom linkml:Uriorcurie ;
-            owl:onProperty <http://example.org/UNKNOWN/rdfs/seeAlso> ] ;
+            owl:onProperty schema1:encodingFormat ;
+            owl:qualifiedCardinality 1 ] ;
     linkml:attributes "{}" .
 
 cm4ai_metadata_model_linkml:dataSchema a owl:ObjectProperty,

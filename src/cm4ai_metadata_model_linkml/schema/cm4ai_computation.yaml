@@ -91,6 +91,10 @@ slots:
     description:
       explicit type
     slot_uri: evi:Computation
+  keywords:
+    description:
+      Keywords or tags used to describe the entity
+    slot_uri: schema:keywords
   runBy:
     required: true
     description:
